@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--name是起一个名字，我们可以通过这个name来获取容器对象
+          name可以使用特殊字符
+          name可以重复（在实际开发中不推荐）-->
+    <!---class :是被管理对象的全包名，spring会通过这个包名来创建对象-->
+    <!--id与name作用基本相同，但不推荐使用 不支持特殊字符，不能重复-->
+ <bean name="user" class="com.cy.bean.User" lazy-init="true" scope="singleton">
+     <property name="u_id" value="2"></property>
+ </bean>
+</beans>
